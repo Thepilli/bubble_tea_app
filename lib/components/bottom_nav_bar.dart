@@ -15,9 +15,9 @@ class GnavBottomNavigationBar extends StatelessWidget {
       child: GNav(
         onTabChange: (value) => onTabChange!(value),
         mainAxisAlignment: MainAxisAlignment.center,
-        activeColor: jWhite,
+        activeColor: jPrimaryLightColor,
         color: jgrey300,
-        tabActiveBorder: Border.all(color: jWhite),
+        tabActiveBorder: Border.all(color: jPrimaryLightColor),
         gap: 10,
         tabs: [
           GButton(text: 'Shop', icon: Icons.home),

@@ -7,11 +7,11 @@ class JElevatedButtonTheme {
 
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      minimumSize: const Size(100, jButtonHeight),
+      minimumSize: const Size(200, jButtonHeight),
       shape: const StadiumBorder(),
-      foregroundColor: jScafoldDarkColor,
+      foregroundColor: jPrimaryLightContainerColor,
       backgroundColor: jPrimaryLightColor,
-      side: const BorderSide(color: jPrimaryLightColor, width: 3),
+      side: const BorderSide(color: jPrimaryLightContainerColor, width: 2),
       padding: const EdgeInsets.symmetric(vertical: jButtonHeight),
     ),
   );

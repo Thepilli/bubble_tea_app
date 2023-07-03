@@ -11,7 +11,7 @@ class JTextTheme {
     //headline
     headlineLarge: GoogleFonts.poppins(fontSize: 20, color: Colors.black54, fontWeight: FontWeight.w600),
     //app bar title
-    headlineMedium: GoogleFonts.poppins(fontSize: 20, color: Colors.black54, fontWeight: FontWeight.w600),
+    headlineMedium: GoogleFonts.poppins(fontSize: 20, color: jPrimaryLightColor, fontWeight: FontWeight.w600),
     //subtitle
     headlineSmall: GoogleFonts.poppins(fontSize: 16, color: Colors.black54, fontWeight: FontWeight.w600),
 

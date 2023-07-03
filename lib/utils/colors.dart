@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
 /* -- LIST OF ALL COLORS -- */
-
-const jPrimaryLightColor = Color(0xFF69F0AE);
-const jPrimaryLightContainerColor = Color(0xFFABEBCC);
-const jSecondaryLightColor = Color(0xFFE1341E);
-const jSecondaryLightContainerColor = Color(0xFFFFAD91);
+/// light made in paletton for E1CBAC
+const jPrimaryLightColor = Color(0xFF9F7F51);
+const jPrimaryLightContainerColor = Color(0xFFFFF1DE);
 const jScafoldLightColor = Color(0xFFE1CBAC);
 
-const jPrimaryDarkColor = Color(0xFFDBA2A1);
+const jPrimaryDarkColor = Color(0xFFFFF1DE);
 const jPrimaryDarkContainerColor = Color(0xFFF9E0D1);
-const jSecondaryDarkColor = Color(0xFF85C6D6);
-const jSecondaryDarkContainerColor = Color(0xFF037481);
 const jScafoldDarkColor = Color(0xFF21251F);
 
 const jWhiteColor = Colors.white;
