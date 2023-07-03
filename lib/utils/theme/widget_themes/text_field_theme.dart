@@ -7,17 +7,26 @@ class JTextFormFieldTheme {
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(80)),
     prefixIconColor: jPrimaryLightContainerColor,
+    hintStyle: const TextStyle(
+      color: jPrimaryLightColor,
+    ),
     floatingLabelStyle: const TextStyle(color: jPrimaryLightContainerColor),
     focusedBorder: const OutlineInputBorder(
-      borderSide: BorderSide(width: 2, color: jPrimaryLightContainerColor),
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderSide: BorderSide(width: 2, color: jPrimaryLightColor),
     ),
   );
+
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(80)),
     prefixIconColor: jPrimaryDarkContainerColor,
+    hintStyle: const TextStyle(
+      color: jPrimaryDarkColor,
+    ),
     floatingLabelStyle: const TextStyle(color: jPrimaryDarkContainerColor),
     focusedBorder: const OutlineInputBorder(
-      borderSide: BorderSide(width: 2, color: jPrimaryDarkContainerColor),
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderSide: BorderSide(width: 2, color: jPrimaryDarkColor),
     ),
   );
 }

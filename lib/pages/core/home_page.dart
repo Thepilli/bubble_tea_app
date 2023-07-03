@@ -2,9 +2,10 @@
 
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:bubble_tea_app/components/bottom_nav_bar.dart';
-import 'package:bubble_tea_app/pages/cart_page.dart';
-import 'package:bubble_tea_app/pages/shop_page.dart';
+import 'package:bubble_tea_app/pages/core/cart_page.dart';
+import 'package:bubble_tea_app/pages/core/shop_page.dart';
 import 'package:bubble_tea_app/utils/colors.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -48,6 +49,7 @@ class _HomePageState extends State<HomePage> {
       btnCancelOnPress: () {},
       btnOkOnPress: () {
         // TODO: implement logout
+        FirebaseAuth.instance.signOut();
       },
     ).show();
   }
