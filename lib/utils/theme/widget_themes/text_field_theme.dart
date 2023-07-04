@@ -1,4 +1,5 @@
 import 'package:bubble_tea_app/utils/constants/colors.dart';
+import 'package:bubble_tea_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class JTextFormFieldTheme {
@@ -10,6 +11,10 @@ class JTextFormFieldTheme {
     hintStyle: const TextStyle(
       color: jPrimaryLightColor,
     ),
+    labelStyle: const TextStyle(
+      color: jPrimaryLightColor,
+    ),
+    contentPadding: const EdgeInsets.only(left: jPadding25),
     floatingLabelStyle: const TextStyle(color: jPrimaryLightContainerColor),
     focusedBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -23,6 +28,10 @@ class JTextFormFieldTheme {
     hintStyle: const TextStyle(
       color: jPrimaryDarkColor,
     ),
+    labelStyle: const TextStyle(
+      color: jPrimaryLightColor,
+    ),
+    contentPadding: const EdgeInsets.only(left: jPadding25),
     floatingLabelStyle: const TextStyle(color: jPrimaryDarkContainerColor),
     focusedBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(20)),

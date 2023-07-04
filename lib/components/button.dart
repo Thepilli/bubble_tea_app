@@ -12,7 +12,7 @@ class MyButton extends StatelessWidget {
       onPressed: onPressed,
       child: SizedBox(
           child: Text(
-        'Sign In',
+        text,
         style: Theme.of(context).textTheme.titleLarge,
       )),
     );

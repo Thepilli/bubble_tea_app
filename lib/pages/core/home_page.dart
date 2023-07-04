@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     if (currentUser != null)
                       Text(
-                        'Logged in as: ${currentUser!.email}',
+                        'Logged in as: \n${currentUser!.email}',
                         style: TextStyle(
                           color: Theme.of(context).textTheme.bodyMedium?.color,
                         ),
