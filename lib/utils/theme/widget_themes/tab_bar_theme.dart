@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bubble_tea_app/utils/colors.dart';
+import 'package:bubble_tea_app/utils/constants/colors.dart';
 
 class JTabBarTheme {
   JTabBarTheme._();

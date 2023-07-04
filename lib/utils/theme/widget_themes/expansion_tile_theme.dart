@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:bubble_tea_app/utils/colors.dart';
-import 'package:bubble_tea_app/utils/sizes.dart';
+import 'package:bubble_tea_app/utils/constants/colors.dart';
+import 'package:bubble_tea_app/utils/constants/sizes.dart';
 
 class JExpansionTileTheme {
   JExpansionTileTheme._();

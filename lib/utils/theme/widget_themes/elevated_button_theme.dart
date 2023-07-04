@@ -1,5 +1,5 @@
-import 'package:bubble_tea_app/utils/colors.dart';
-import 'package:bubble_tea_app/utils/sizes.dart';
+import 'package:bubble_tea_app/utils/constants/colors.dart';
+import 'package:bubble_tea_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class JElevatedButtonTheme {

@@ -4,7 +4,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:bubble_tea_app/components/bottom_nav_bar.dart';
 import 'package:bubble_tea_app/pages/core/cart_page.dart';
 import 'package:bubble_tea_app/pages/core/shop_page.dart';
-import 'package:bubble_tea_app/utils/colors.dart';
+import 'package:bubble_tea_app/utils/constants/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -18,6 +18,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+  // user
+  User? currentUser;
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentUser();
+  }
+
+  // get the current user
+  void getCurrentUser() {
+    final auth = FirebaseAuth.instance;
+    if (auth.currentUser != null) {
+      setState(() {
+        currentUser = auth.currentUser;
+      });
+    }
+  }
 
   // navigate the bottom bar
   void navigateBottomBar(int newIndex) {
@@ -30,7 +48,7 @@ class _HomePageState extends State<HomePage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: Text('Your are about to be loged', style: Theme.of(context).textTheme.bodyMedium),
+              title: Text('Your are about to be logged out', style: Theme.of(context).textTheme.bodyMedium),
             ));
   }
 
@@ -92,15 +110,37 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            ListTile(
-              enabled: true,
-              onTap: () {
-                loggout();
-              },
-              tileColor: Colors.transparent,
-              leading: Icon(Icons.logout),
-              title: Text('Logout', style: Theme.of(context).textTheme.labelMedium),
-            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    if (currentUser != null)
+                      Text(
+                        'Logged in as: ${currentUser!.email}',
+                        style: TextStyle(
+                          color: Theme.of(context).textTheme.bodyMedium?.color,
+                        ),
+                      ),
+                    CircleAvatar(
+                      backgroundColor: Colors.transparent,
+                      foregroundImage: currentUser!.isAnonymous
+                          ? AssetImage('assets/icons/profile_anonymous.png')
+                          : AssetImage('assets/icons/profile_bear.png'),
+                    )
+                  ],
+                ),
+                ListTile(
+                  enabled: true,
+                  onTap: () {
+                    loggout();
+                  },
+                  tileColor: Colors.transparent,
+                  leading: Icon(Icons.logout),
+                  title: Text('Logout', style: Theme.of(context).textTheme.labelMedium),
+                ),
+              ],
+            )
           ],
         ),
       ),

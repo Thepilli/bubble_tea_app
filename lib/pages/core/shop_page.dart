@@ -2,7 +2,7 @@ import 'package:bubble_tea_app/components/tea_tile.dart';
 import 'package:bubble_tea_app/models/bubble_tea_shop_model.dart';
 import 'package:bubble_tea_app/models/drink_model.dart';
 import 'package:bubble_tea_app/pages/core/order_page.dart';
-import 'package:bubble_tea_app/utils/sizes.dart';
+import 'package:bubble_tea_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -7,7 +7,7 @@ import 'package:bubble_tea_app/utils/theme/widget_themes/text_field_theme.dart';
 import 'package:bubble_tea_app/utils/theme/widget_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../constants/colors.dart';
 import 'widget_themes/tab_bar_theme.dart';
 
 class JAppTheme {
