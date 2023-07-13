@@ -39,30 +39,30 @@ class _RegisterPageState extends State<RegisterPage> {
 
       //display error message
       displayErrorMessage(Strings.noMatchPasswordText);
-    }
+    } else {
+      //try to create a new user
+      try {
+        // create a new user
+        UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailTextController.text.trim(),
+          password: passwordTextController.text.trim(),
+        );
 
-    //try to create a new user
-    try {
-      // create a new user
-      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: emailTextController.text.trim(),
-        password: passwordTextController.text.trim(),
-      );
+        //after creating a new user, create a new document in the cloud firestore collection called Users
+        FirebaseFirestore.instance.collection('Users').doc(userCredential.user!.email).set({
+          'username': emailTextController.text.split('@')[0], //initial username
+          'bio': 'empty bio...', //initial bio
+          //add more fields here when needed
+        });
 
-      //after creating a new user, create a new document in the cloud firestore collection called Users
-      FirebaseFirestore.instance.collection('Users').doc(userCredential.user!.email).set({
-        'username': emailTextController.text.split('@')[0], //initial username
-        'bio': 'empty bio...', //initial bio
-        //add more fields here when needed
-      });
-
-      //pop loading circle
-      if (context.mounted) Navigator.pop(context);
-    } on FirebaseAuthException catch (e) {
-      //pop loading circle
-      Navigator.pop(context);
-      //display error message
-      displayErrorMessage(e.code);
+        //pop loading circle
+        if (context.mounted) Navigator.pop(context);
+      } on FirebaseAuthException catch (e) {
+        //pop loading circle
+        Navigator.pop(context);
+        //display error message
+        displayErrorMessage(e.code);
+      }
     }
   }
 

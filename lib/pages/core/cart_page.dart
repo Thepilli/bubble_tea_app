@@ -2,6 +2,7 @@ import 'package:bubble_tea_app/components/tea_tile.dart';
 import 'package:bubble_tea_app/models/bubble_tea_shop_model.dart';
 import 'package:bubble_tea_app/models/drink_model.dart';
 import 'package:bubble_tea_app/utils/constants/sizes.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,6 +17,10 @@ class _CartPageState extends State<CartPage> {
   // remove drink from cart
   void removeFromCart(DrinkModel drink) {
     Provider.of<BubbleTeaShopModel>(context, listen: false).removeFromCart(drink);
+  }
+
+  void logout() {
+    FirebaseAuth.instance.signOut();
   }
 
   @override
@@ -42,7 +47,7 @@ class _CartPageState extends State<CartPage> {
                       ),
                     ),
                     //pay button
-                    ElevatedButton(onPressed: () {}, child: const Text('Pay'))
+                    ElevatedButton(onPressed: logout, child: const Text('Pay'))
                   ],
                 ),
               ),

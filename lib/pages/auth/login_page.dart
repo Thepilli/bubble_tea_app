@@ -274,7 +274,7 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(width: jDefaultSize),
 
                         // apple button
-                        SquareTile(imagePath: 'assets/icons/google.png'),
+                        // SquareTile(imagePath: 'assets/icons/google.png'),
                       ],
                     ),
 
