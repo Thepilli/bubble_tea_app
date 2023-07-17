@@ -40,4 +40,7 @@ The Boba Tea Application is released under the MIT License. Refer to the LICENSE
 <img src="https://firebasestorage.googleapis.com/v0/b/my-api-endpoint.appspot.com/o/boba_screen_2.png?alt=media&token=d81477f7-c524-4173-bde3-ffc389cc0e97" height="500"  />
 <img src="https://firebasestorage.googleapis.com/v0/b/my-api-endpoint.appspot.com/o/boba_screen_3.png?alt=media&token=69ab28e1-e7c5-4dc1-8aa5-78ff65366f23" height="500"  />
 <img src="https://firebasestorage.googleapis.com/v0/b/my-api-endpoint.appspot.com/o/boba_screen_4.png?alt=media&token=4d3ac436-caf7-4157-89c9-aae71f7da97e" height="500"  />
-<video src="https://firebasestorage.googleapis.com/v0/b/my-api-endpoint.appspot.com/o/boba_tea.mp4?alt=media&token=e57d654b-a4cd-4e5d-8ea5-bdb0d0d8b3d9" height="500"  />
+
+
+https://github.com/Thepilli/bubble_tea_app/assets/104307512/d5569a9d-ff81-44cf-b629-fff3289f8c66
+
